@@ -1,0 +1,51 @@
+@use "../../scss/" as *;
+
+.buttonBack{
+    background-color: inherit;
+    @include fnt(16, 24, $weight:400, $color: $blue-100);
+
+    &:hover{
+        background-color: inherit;
+    }
+
+    object{
+        margin: 0;
+    }
+}
+
+.searchCardContainer{
+    margin-top: 64rem;
+}
+
+.decausedTitle{
+    @include fnt(48, 52, $weight:600, $color: $gray-800)
+}
+.decausedSubTitle{
+    @include fnt(16, 24, $weight:400, $color: $gray-800)
+}
+
+.containerCardDecaused{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24rem;
+    margin-top: 32rem;
+}
+
+.cardDecaused{
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+    border-radius: 12rem;
+    background-color: $gray-100;
+    padding: 16rem 24rem;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+
+    &:hover{
+        background-color: $gray-200;
+    }
+
+    h3{
+        @include fnt(20, 24, $weight:600, $color: $gray-800)
+    }
+}

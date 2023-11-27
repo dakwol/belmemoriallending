@@ -1,0 +1,20 @@
+@use "../../scss/" as *;
+
+.containerFull{
+    width: 100%;
+    height: 100%;
+}
+
+.conainerBgImg{
+    position: absolute;
+    z-index: -100;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.containerPage{
+    max-width: 1222rem;
+    height: 91vh;
+    margin: 0 auto;
+}

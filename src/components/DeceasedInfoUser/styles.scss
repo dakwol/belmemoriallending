@@ -1,0 +1,48 @@
+@use "../../scss/" as *;
+
+.styleMapContainer{
+    border-radius: 12rem;
+  
+    height: 400rem;
+    margin-top: 32rem;
+    width: 100%;
+}
+.mapStyle{
+    border-radius: 12rem;
+    height: 400rem;
+    width: 100%;
+}
+
+.deceasedInfo{
+    margin-top: 64rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 72rem;
+
+}
+
+.containerInfo{
+    width: 100%;
+}
+
+.containerInfoUser{
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    h1{
+        @include fnt(40, 48, $weight: 600, $color: $gray-900);
+    }
+    h2{
+        @include fnt(16, 24, $weight: 600, $color: $gray-900);
+    }
+    span{
+        @include fnt(16, 24, $weight: 400, $color: $gray-400);
+    }
+}
+
+.imgDeceased{
+    width: 500rem;
+    object-fit: contain;
+    height: 100%;
+}

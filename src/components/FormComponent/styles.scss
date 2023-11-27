@@ -1,0 +1,99 @@
+@use "../../scss/" as *;
+
+.containerForm{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 202rem auto;
+    grid-gap: 64rem;
+
+    .formTitle{
+        max-width: 820rem;
+        @include fnt(64, 72, $weight: 600, $color: $gray-800);
+    }
+
+    .containerFormInputs{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 8rem;
+        grid-row-gap: 24rem;
+
+
+        .nameInputsContainer{
+            display: flex;
+            grid-gap: 2rem;
+            grid-column: span 4;
+
+            .formItem{
+                &:nth-child(1){
+                    input{
+                        border-radius: 0;
+                        border-bottom-left-radius: 12rem;
+                        border-top-left-radius: 12rem;
+                    }
+                }
+                &:nth-child(2){
+                    input{
+                        border-radius: 0;
+                    }
+                }
+                &:nth-child(3){
+                    input{
+                        border-radius: 0;
+                        border-bottom-right-radius: 12rem;
+                        border-top-right-radius: 12rem;
+                    }
+                }
+            }
+        }
+
+        .formItem {
+            position: relative;
+            width: 100%;
+          
+            label {
+              @include fnt(16, 40, $weight: 400, $color: $gray-500);
+              position: absolute;
+              z-index: 1;
+              top: 49%;
+              left: 0;
+              transform: translate(0, -49%);
+              pointer-events: none;
+              transition: .3s ease-in-out;
+            }
+          
+            input {
+              width: 100%;
+              padding: 8rem 12rem;
+              height: 56rem;
+              border-radius: 12rem;
+              box-shadow: 0px 8px 12px 0px rgba(29, 41, 57, 0.05), 0px 2px 2px 0px rgba(29, 41, 57, 0.10);
+          
+              &:focus {
+                box-shadow: 0px 0px 0px 2px #F2F4F7, 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+              }
+          
+             
+            }
+          
+            &:focus-within label {
+              top: 22%;
+              @include fnt(12, 40, $weight: 400, $color: $gray-500);
+            }
+
+            &.focus{
+                label {
+                    top: 22%;
+                    @include fnt(12, 40, $weight: 400, $color: $gray-500);
+                }
+            }
+          }
+        }                 
+
+    .searchButton{
+        background-color: $blue-100;
+        border-radius: 12rem;
+        box-shadow: 0px 8px 12px 0px rgba(29, 41, 57, 0.05), 0px 2px 2px 0px rgba(29, 41, 57, 0.10);
+    }
+}

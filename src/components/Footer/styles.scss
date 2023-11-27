@@ -1,0 +1,26 @@
+@use "../../scss/" as *;
+
+.footer{
+    background-color: $gray-900;
+    padding: 21rem 0;
+
+    .containerFooter{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+        max-width: 1222rem;
+        margin: 0 auto;
+
+        .footerLogoText{
+            display: flex;
+            align-items: center;
+            grid-gap: 8rem;
+
+            p{
+                max-width: 243rem;
+                @include fnt(14, 16, $weight: 500, $color: $white);
+            }
+        }
+    }
+}
